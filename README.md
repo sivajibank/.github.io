@@ -193,8 +193,6 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
     var custTa = B.ct ? '<div class="ta" style="font-weight:800;">' + esc(B.ct) + '</div>' : '';
     var custEn = B.cn ? '<div style="font-weight:700;' + (B.ct?'font-size:11.5px;color:var(--mut);':'') + '">' + esc(B.cn) + '</div>' : '';
 
-    var dcRow = (parseFloat(B.dc||0) > 0)
-      ? '<tr><td class="lbl">டாக்.கட்டணம் / Doc Charge</td><td class="val">' + Rs(B.dc) + '</td></tr>' : '';
 
     document.getElementById('app').innerHTML =
     '<div class="sheet">' +
@@ -244,8 +242,6 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
         '<div class="sec-h ta">💰 கடன் விவரம் / Loan Details</div>' +
         '<table>' +
           '<tr><td class="lbl ta">கடன் தொகை / Loan</td><td class="val" style="font-weight:800;color:var(--red);">' + Rs(B.amt) + '</td></tr>' +
-          dcRow +
-          (B.ty ? '<tr><td class="lbl ta">வகை / Type</td><td class="val">' + esc(B.ty) + '</td></tr>' : '') +
         '</table>' +
       '</div>' +
 
